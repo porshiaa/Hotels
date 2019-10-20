@@ -7,7 +7,7 @@ var xhttp = new XMLHttpRequest();
 function createCard(number){
 	var html = '<div class="card" id="popup'+number+'">'+ '<img class="card-img" id="card-img'+number+'" src="">'+
 	'<h1 class = "hotel-name" id="hotel-title'+number+'"></h1>'+
-	'<p class = "hotel-content" id = "hotel-loc'+number+'"><Hi/p>'+
+	'<p class = "hotel-content" id = "hotel-loc'+number+'"></p>'+
 
 
 
@@ -115,18 +115,16 @@ $(window).load(function() {
 // xhttp.open("GET", "http://hotel.pi.tv/api.php", true);
 // xhttp.send();
 
+var hotelinfo;
+
 function getInfo(callback){
 	var url = "http://hotel.pi.tv/api.php";
 	var xhr=new XMLHttpRequest();
 	xhr.open("GET", url, true);
 	console.log("xhr opened");
-	var hotelinfo;
 
 	xhr.onload = function(e){
 		hotelinfo = JSON.parse(xhr.responseText);
-		console.log("got in onload")
-
-		console.log(hotelinfo);
 		return hotelinfo;
 		callback();
 	}
@@ -157,8 +155,7 @@ function setCardInfo(hotelinfo){
 }
 
 function setUp(){
-	var hotelinfo = getInfo(setCardInfo(hotelinfo));
-	console.log(hotelinfo);
+	getInfo(setCardInfo(hotelinfo));
 
 }
 
