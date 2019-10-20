@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Hotels</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="Hotels.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js"></script>
+	<link rel="stylesheet" type="text/css" href="Hotels.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css" type="text/css">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<div class="container">
+
+		<div class="header">
+			<img class="headerpic" src="header-bg.jpg">
+		</div>
+
+		<div class="text-box">
+			<p class="example">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+				<p id="demo"></p>
+
+
+			</p>
+		</div>
+
+		<div class="main-box" id='main'>
+
+
+<!-- 			<div class="card" id="popup">
+				<img class="card-img" src="http://hotel.pi.tv/images//hotels/1/dorchester.jpg">
+				<h1 class = "hotel-name" id="hotel-title"></h1>
+				<p class = "hotel-content" id = "hotel-loc"></p>
+
+
+
+				<div id="myModal" class="modal">
+
+					<div class="modal-content">
+
+						<img class="modal-header" src="http://hotel.pi.tv/images//hotels/2/pullman.jpg">
+
+						<div class="modal-text">
+							<div class="model-title">
+								<h1 id='modal-title'>Hotel name</h1>
+							</div>
+
+								<div class="modal-address" id = 'address'>
+								<p>	7 something rd<br>
+									here<br>
+									this county<br>
+									postcode
+								</p>
+							</div>
+
+							<div class="modal-desc" id='description'>
+								<p>a description</p>
+							</div>
+
+						
+
+							<div class="modal-review" id='review'>
+								"blah blah"
+							</div>
+
+							<div class="modal-user" id='username'>
+								<p>- by me 
+								</p>
+							</div>
+
+							<div class="extra-pics">
+								<img id="pic1" src="http://hotel.pi.tv/images//hotels/2/pullman-1.jpg">
+								<img id="pic2" src="http://hotel.pi.tv/images//hotels/2/pullman-2.jpg">
+								<img id="pic3" src="http://hotel.pi.tv/images//hotels/2/pullman-3.jpg">
+
+
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div> -->
+
+
+			</div>
+<!-- 			<script>var modal = document.getElementById("myModal");
+			var btn = document.getElementById("popup");
+
+			// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script> -->
+
+
+
+
+
+			<div id="map" class="map">
+				<script>var map = new ol.Map({
+					target: 'map',
+					layers: [
+					new ol.layer.Tile({
+						source: new ol.source.OSM()
+					})
+					],
+					view: new ol.View({
+						center: ol.proj.fromLonLat([37.41, 8.82]),
+						zoom: 4
+					})
+				});</script>
+			</div>
+
+		</div>
+
+
+
+	</body>
+	</html>

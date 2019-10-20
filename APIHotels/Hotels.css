@@ -1,0 +1,159 @@
+.container {
+  display: grid;
+  padding:0;
+}
+
+.header{
+
+	position: relative;
+	width: 100%;
+	background-color: #26384E;
+	padding:0;
+	margin:0;
+	/*height: 10%;*/
+ 
+}
+
+.headerpic{
+	float: right;
+	max-width: 100%;
+
+}
+
+p {
+	font-family: 'Quicksand', sans-serif;
+}
+
+.example{
+	font-size:1em;
+	text-align: center;
+	padding: 10px;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+.text-box{
+	position: relative;
+	width:100%;
+	background-color: #F2EFE6;
+}
+
+.main-box{
+	position: relative;
+	width:100%;
+	background-color: #FAFEFF;
+}
+
+.card {
+	position: relative;
+	border-color: grey;
+	border-style:solid;
+	height: 40%;
+	width:30%;
+	margin-top:5%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+	background-color: white;
+
+}
+
+.card-img{
+	position:relative;
+	height:100px;
+	width:120px;
+}
+
+.hotel-name{
+	font-family: 'Quicksand', sans-serif;
+	position: absolute;
+	top: 3%;
+	color: #949494;
+	left: 40%;
+	font-size: 1em;
+}
+
+.hotel-content{
+	position: absolute;
+	top: 20%;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	left:40%;
+	font-size: 0.9em;
+
+}
+
+.map{
+	position:relative;
+    height: 300px;
+	width:100%;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+.modal-content {
+	border-radius: 10px;
+  background-color: #fefefe;
+  margin: auto;
+  border: 1px solid #888;
+  width: 60%;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.modal-text{
+	padding: 20px;
+	font-family: 'Quicksand', sans-serif;
+
+}
+
+.modal-header{
+	display: inline;
+	width: 100%;
+	height:180px;
+	object-fit: cover;
+}
+
+.modal-address{
+	display:inline;
+	float:right;
+}
+
+.modal-review{
+	font-weight: bold;
+	font-style: italic;
+}
+
+.extra-pics{
+	display: inline;
+}
+
+#pic1{
+	width: 26%;
+}
+
+#pic2{
+	width:26%;
+}
+
+#pic3{
+	width:26%;
+}
