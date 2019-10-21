@@ -2,7 +2,6 @@
 
 
 
-var xhttp = new XMLHttpRequest();
 
 function createCard(number){
 	var html = '<div class="card" id="popup'+number+'">'+ '<img class="card-img" id="card-img'+number+'" src="">'+
@@ -64,6 +63,10 @@ $(window).load(function() {
 	setUp();
 	console.log("set up");
 
+
+// dynamic content here works but very inelegant (clearly) and will only work for one hotel at a time
+// attempted to fix with functions below but ran into too many bugs
+
 	// var hotelinfo = JSON.parse(xhttp.responseText);
 	// for(i=0;i<hotelinfo.length; i++){
 	// 	var card = createCard();
@@ -90,6 +93,10 @@ $(window).load(function() {
  //    	document.getElementById("modal-header").src=cover;
  //    	document.getElementById("modal-title").innerHTML = title;
  //    	document.getElementById("address").innerHTML = add1+ "<br>"+add2+ "<br>" +city+"<br>"+postcode+"<br>"+country;
+
+ // below can be commented back in to see functionality of modal/popup
+
+
   //   	var modal = document.getElementById("myModal");
   //   	var btn = document.getElementById("popup");
   //   	// var url = "http://hotel.pi.tv/api.php"+"?id=" +id;
@@ -116,6 +123,8 @@ $(window).load(function() {
 // xhttp.send();
 
 var hotelinfo;
+
+// main bug was in this function
 
 function getInfo(callback){
 	var url = "http://hotel.pi.tv/api.php";
